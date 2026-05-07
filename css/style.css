@@ -5,6 +5,10 @@ body::before {
   height: 60px;
 }
 
+.social-link {
+  text-decoration: none;
+}
+
 /* Newsletter width*/
 @media (min-width: 768px) {
   .news-input {
