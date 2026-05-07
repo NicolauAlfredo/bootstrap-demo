@@ -1,3 +1,11 @@
+/* Space on Body */
+body::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+
+/* Newsletter width*/
 @media (min-width: 768px) {
   .news-input {
     width: 50%;
