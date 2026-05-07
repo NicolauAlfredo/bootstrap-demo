@@ -9,6 +9,11 @@ body::before {
   text-decoration: none;
 }
 
+.contact-links a {
+  text-decoration: none;
+  color: #212529;
+}
+
 /* Newsletter width*/
 @media (min-width: 768px) {
   .news-input {
