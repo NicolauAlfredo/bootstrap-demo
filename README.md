@@ -58,3 +58,23 @@ bootstrap-demo/
 │   └── style.css
 ├── index.html
 └── README.md
+```
+
+## What I Practiced
+
+The main goal of this project was to understand how Bootstrap works in real frontend layouts, including:
+
+- Bootstrap grid system
+- Utility classes
+- Responsive breakpoints
+- Components such as navbar, cards, accordion and modal
+- Forms and layout spacing
+- Combining Bootstrap with custom CSS
+
+## Future Improvements
+- Replace placeholder text with real content
+- Add form validation with JavaScript
+- Improve visual design with custom CSS
+- Add real social media links
+- Optimize images and assets
+- Add screenshots to the README
