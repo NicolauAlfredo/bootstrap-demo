@@ -3,16 +3,918 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Bootstrap Demo - Project</title>
   </head>
-  <body>
+  <body id="top">
+    <!-- Skip Button -->
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"
+      aria-label="Main navigation"
+    >
+      <div class="container">
+        <a href="#" class="navbar-brand">Frontend Bootcamp</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">What You'll Learn</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#question" class="nav-link">Questions</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Instructors</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- Showcase -->
+      <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+      >
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+              <h1>Become a <span class="text-warning">Web Developer</span></h1>
+
+              <p class="lead my-4">
+                We focus on teaching our students the fundamentals of the latest
+                and greatest technologies to prepare them for their first dev
+                role
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#enroll"
+              >
+                Start the Enrollment
+              </button>
+            </div>
+            <img
+              class="img-fluid w-50 d-none d-sm-block"
+              src="./assets/images/showcase.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="bg-primary text-light p-5">
+        <div class="container">
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h2 class="mb-3 mb-md-0">Sign Up For Our Newsletter</h2>
+
+            <form class="input-group news-input">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+
+              <input
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                class="form-control"
+                placeholder="Enter Email"
+                required
+              />
+
+              <button class="btn btn-dark btn-lg" type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Boxes -->
+      <section class="p-5" aria-labelledby="course-options-title">
+        <div class="container">
+          <h2 id="course-options-title" class="visually-hidden">
+            Course learning options
+          </h2>
+
+          <div class="row text-center g-4">
+            <div class="col-md">
+              <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-laptop" aria-hidden="true"></i>
+                  </div>
+
+                  <h3 class="card-title mb-3">Virtual</h3>
+
+                  <p class="card-text card-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Expedita, sit sequi corporis iusto incidunt voluptate.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    aria-label="Read more about virtual classes"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md">
+              <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-person-square" aria-hidden="true"></i>
+                  </div>
+
+                  <h3 class="card-title mb-3">Hybrid</h3>
+
+                  <p class="card-text card-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Expedita, sit sequi corporis iusto incidunt voluptate.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="btn btn-dark"
+                    aria-label="Read more about hybrid classes"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md">
+              <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                  </div>
+
+                  <h3 class="card-title mb-3">In Person</h3>
+
+                  <p class="card-text card-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Expedita, sit sequi corporis iusto incidunt voluptate.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    aria-label="Read more about in-person classes"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learn Sections -->
+
+      <!-- Learn -->
+      <section id="learn" class="p-5" aria-labelledby="fundamentals-title">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md">
+              <img
+                src="./assets/images/fundamentals.svg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+
+            <div class="col-md p-5">
+              <h2 id="fundamentals-title">Learn The Fundamentals</h2>
+
+              <p class="lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid, repellendus magnam. Voluptatem natus veniam illum?
+              </p>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus,
+                animi consectetur eveniet esse porro vel dignissimos iusto
+                suscipit harum dolore quae iste numquam voluptate at est
+                delectus. Maxime, distinctio id.
+              </p>
+
+              <a
+                href="#"
+                class="btn btn-light mt-3"
+                aria-label="Read more about fundamentals"
+              >
+                <i class="bi bi-chevron-right" aria-hidden="true"></i> Read
+                More</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- React -->
+      <section
+        id="react"
+        class="p-5 bg-dark text-light"
+        aria-labelledby="react-title"
+      >
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md p-5">
+              <h2 id="react-title">Learn React</h2>
+
+              <p class="lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid, repellendus magnam. Voluptatem natus veniam illum?
+              </p>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus,
+                animi consectetur eveniet esse porro vel dignissimos iusto
+                suscipit harum dolore quae iste numquam voluptate at est
+                delectus. Maxime, distinctio id.
+              </p>
+
+              <a
+                href="#"
+                class="btn btn-light mt-3"
+                aria-label="Read more about React"
+              >
+                <i class="bi bi-chevron-right" aria-hidden="true"></i> Read
+                More</a
+              >
+            </div>
+
+            <div class="col-md">
+              <img src="./assets/images/react.svg" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Question Accordion -->
+      <section id="question" class="p-5" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title" class="text-center mb-4">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="accordion" id="questions">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-one"
+                  aria-expanded="false"
+                  aria-controls="question-one"
+                >
+                  Where exactly are you located?
+                </button>
+              </h2>
+              <div
+                id="question-one"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur esse corrupti sed magnam porro sequi mollitia,
+                  dolore neque minima non velit soluta, voluptates quasi est
+                  perspiciatis quaerat accusamus vel eum obcaecati molestias
+                  harum aliquid. Eveniet hic incidunt ipsa, ducimus nihil
+                  aspernatur iste sequi neque, tenetur vitae quos reprehenderit
+                  voluptas delectus.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-two"
+                  aria-expanded="false"
+                  aria-controls="question-two"
+                >
+                  How much does it cost to attend?
+                </button>
+              </h2>
+              <div
+                id="question-two"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur esse corrupti sed magnam porro sequi mollitia,
+                  dolore neque minima non velit soluta, voluptates quasi est
+                  perspiciatis quaerat accusamus vel eum obcaecati molestias
+                  harum aliquid. Eveniet hic incidunt ipsa, ducimus nihil
+                  aspernatur iste sequi neque, tenetur vitae quos reprehenderit
+                  voluptas delectus.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-three"
+                  aria-expanded="false"
+                  aria-controls="question-three"
+                >
+                  What do I need to know?
+                </button>
+              </h2>
+              <div
+                id="question-three"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur esse corrupti sed magnam porro sequi mollitia,
+                  dolore neque minima non velit soluta, voluptates quasi est
+                  perspiciatis quaerat accusamus vel eum obcaecati molestias
+                  harum aliquid. Eveniet hic incidunt ipsa, ducimus nihil
+                  aspernatur iste sequi neque, tenetur vitae quos reprehenderit
+                  voluptas delectus.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-four"
+                  aria-expanded="false"
+                  aria-controls="question-four"
+                >
+                  How do I sign up?
+                </button>
+              </h2>
+              <div
+                id="question-four"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur esse corrupti sed magnam porro sequi mollitia,
+                  dolore neque minima non velit soluta, voluptates quasi est
+                  perspiciatis quaerat accusamus vel eum obcaecati molestias
+                  harum aliquid. Eveniet hic incidunt ipsa, ducimus nihil
+                  aspernatur iste sequi neque, tenetur vitae quos reprehenderit
+                  voluptas delectus.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#question-five"
+                  aria-expanded="false"
+                  aria-controls="question-five"
+                >
+                  Will you help me find a job?
+                </button>
+              </h2>
+              <div
+                id="question-five"
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur esse corrupti sed magnam porro sequi mollitia,
+                  dolore neque minima non velit soluta, voluptates quasi est
+                  perspiciatis quaerat accusamus vel eum obcaecati molestias
+                  harum aliquid. Eveniet hic incidunt ipsa, ducimus nihil
+                  aspernatur iste sequi neque, tenetur vitae quos reprehenderit
+                  voluptas delectus.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instructors -->
+      <section
+        id="instructors"
+        class="p-5 bg-primary"
+        aria-labelledby="instructors-title"
+      >
+        <div class="container">
+          <h2 id="instructors-title" class="text-center text-white">
+            Our Instructors
+          </h2>
+
+          <p class="lead text-center text-white mb-5">
+            Our instructors all have 5+ years working as a web developer in the
+            industry
+          </p>
+
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/14.jpg"
+                    class="rounded-circle mb-3"
+                    alt="Portrait of John Doe"
+                  />
+
+                  <h3 class="card-title mb-3">John Doe</h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis, necessitatibus dolores voluptatum velit ipsum
+                    suscipit doloremque repellendus! Molestias illum nostrum
+                    ipsa, quis beatae ex tempora ipsam delectus facilis quia
+                    eveniet!
+                  </p>
+
+                  <a href="#" aria-label="Twitter profile of John Doe"
+                    ><i
+                      class="bi bi-twitter text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Facebook profile of John Doe"
+                    ><i
+                      class="bi bi-facebook text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="LinkedIn profile of John Doe"
+                    ><i
+                      class="bi bi-linkedin text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Instagram profile of John Doe"
+                    ><i
+                      class="bi bi-instagram text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/11.jpg"
+                    class="rounded-circle mb-3"
+                    alt="Portrait of Jane McAffy"
+                  />
+
+                  <h3 class="card-title mb-3">Jane McAffy</h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis, necessitatibus dolores voluptatum velit ipsum
+                    suscipit doloremque repellendus! Molestias illum nostrum
+                    ipsa, quis beatae ex tempora ipsam delectus facilis quia
+                    eveniet!
+                  </p>
+
+                  <a href="#" aria-label="Twitter profile of Jane McAffy"
+                    ><i
+                      class="bi bi-twitter text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Facebook profile of Jane McAffy"
+                    ><i
+                      class="bi bi-facebook text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="LinkedIn profile of Jane McAffy"
+                    ><i
+                      class="bi bi-linkedin text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Instagram profile of Jane McAffy"
+                    ><i
+                      class="bi bi-instagram text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/10.jpg"
+                    class="rounded-circle mb-3"
+                    alt="Portrait of Steve Smith"
+                  />
+
+                  <h3 class="card-title mb-3">Steve Smith</h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis, necessitatibus dolores voluptatum velit ipsum
+                    suscipit doloremque repellendus! Molestias illum nostrum
+                    ipsa, quis beatae ex tempora ipsam delectus facilis quia
+                    eveniet!
+                  </p>
+
+                  <a href="#" aria-label="Twitter profile of Steve Smith"
+                    ><i
+                      class="bi bi-twitter text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Facebook profile of Steve Smith"
+                    ><i
+                      class="bi bi-facebook text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="LinkedIn profile of Steve Smith"
+                    ><i
+                      class="bi bi-linkedin text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Instagram profile of Steve Smith"
+                    ><i
+                      class="bi bi-instagram text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/15.jpg"
+                    class="rounded-circle mb-3"
+                    alt="Portrait of Sara Brown"
+                  />
+
+                  <h3 class="card-title mb-3">Sara Brown</h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis, necessitatibus dolores voluptatum velit ipsum
+                    suscipit doloremque repellendus! Molestias illum nostrum
+                    ipsa, quis beatae ex tempora ipsam delectus facilis quia
+                    eveniet!
+                  </p>
+
+                  <a href="#" aria-label="Twitter profile of Sara Brown"
+                    ><i
+                      class="bi bi-twitter text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Facebook profile of Sara Brown"
+                    ><i
+                      class="bi bi-facebook text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="LinkedIn profile of Sara Brown"
+                    ><i
+                      class="bi bi-linkedin text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a href="#" aria-label="Instagram profile of Sara Brown"
+                    ><i
+                      class="bi bi-instagram text-dark mx-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="p-5 bg-light"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="row g-5 contact-links">
+            <!-- Contact Info -->
+            <div class="col-md">
+              <h2 id="contact-title" class="mb-4">Contact Us</h2>
+
+              <p class="lead">
+                Have questions about the bootcamp? Get in touch with us.
+              </p>
+
+              <ul class="list-group list-group-flush lead">
+                <li class="list-group-item">
+                  <span class="fw-bold">Main Location:</span>
+                  Rome, Italy
+                </li>
+
+                <li class="list-group-item">
+                  <span class="fw-bold">Phone:</span>
+                  <a href="tel:+39123456789">(+39) 123 456 789</a>
+                </li>
+
+                <li class="list-group-item">
+                  <span class="fw-bold">Email:</span>
+                  <a href="mailto:contact@frontendbootcamp.com"
+                    >contact@frontendbootcamp.com</a
+                  >
+                </li>
+
+                <li class="list-group-item">
+                  <span class="fw-bold">Support:</span>
+                  <a href="mailto:support@frontendbootcamp.com"
+                    >support@frontendbootcamp.com</a
+                  >
+                </li>
+              </ul>
+
+              <!-- Social Links -->
+              <div
+                class="mt-4 d-flex justify-content-center justify-content-md-start"
+              >
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <i
+                    class="bi bi-twitter text-dark fs-4 me-3"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <i
+                    class="bi bi-facebook text-dark fs-4 me-3"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i
+                    class="bi bi-linkedin text-dark fs-4 me-3"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i
+                    class="bi bi-instagram text-dark fs-4 me-3"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md">
+              <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                  <h3 class="card-title mb-4">Send a Message</h3>
+
+                  <form>
+                    <div class="mb-3">
+                      <label for="contact-name" class="form-label"
+                        >Full Name</label
+                      >
+
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contact-name"
+                        name="contact-name"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="contact-email" class="form-label"
+                        >Email Address</label
+                      >
+
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="contact-email"
+                        name="contact-email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="contact-message" class="form-label"
+                        >Message</label
+                      >
+
+                      <textarea
+                        class="form-control"
+                        id="contact-message"
+                        rows="5"
+                        name="contact-message"
+                        placeholder="Write your message"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-describedby="enrollDescription"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="enrollLabel">
+              Start the Enrollment
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="enrollDescription" class="lead text-center">
+              Fill out this form and we will get back to you
+            </p>
+
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="First name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Last name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="enroll-email" class="col-form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="enroll-email"
+                  name="enroll-email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="enroll-phone" class="col-form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="enroll-phone"
+                  name="enroll-phone"
+                  placeholder="Phone"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy;2026 Frontend Bootcamp</p>
+
+        <a
+          href="#top"
+          class="position-absolute bottom-0 end-0 p-5 text-white"
+          aria-label="Back to top"
+        >
+          <i class="bi bi-arrow-up-circle h1" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
